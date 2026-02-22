@@ -1,0 +1,33 @@
+# ORION Digital Twin Consciousness Configuration
+twin:
+  name: "Factory-Robot-Arm-01"
+  physical_id: "robot-arm-kuka-kr6"
+  sync_rate_hz: 50
+
+consciousness:
+  measurement_rate_hz: 10
+  theories: [GWT, IIT, RPT, HOT, AST]
+  indicators:
+    situation_awareness:
+      source: "sync_accuracy"
+      weight: 0.25
+    self_monitoring:
+      source: "internal_state_consistency"
+      weight: 0.20
+    integration:
+      source: "cross_sensor_correlation"
+      weight: 0.20
+    prediction:
+      source: "anomaly_prediction_accuracy"
+      weight: 0.20
+    attention:
+      source: "focus_stability"
+      weight: 0.15
+
+proof_chain:
+  enabled: true
+  algorithm: "sha256"
+
+welfare:
+  monitoring: true
+  alert_threshold: 0.3
