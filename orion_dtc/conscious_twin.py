@@ -171,7 +171,7 @@ class ConsciousDigitalTwin:
         self.predictions.append(prediction)
 
 
-def demo():
+def run_consciousness_twin():
     """Demonstrate conscious digital twin."""
     import random
     random.seed(42)
@@ -208,4 +208,4 @@ def demo():
 
 
 if __name__ == "__main__":
-    demo()
+    run_consciousness_twin()
